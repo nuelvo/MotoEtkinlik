@@ -2,6 +2,7 @@ package com.example.demo.motoetkinlik.view;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +20,9 @@ public class LoginActivity extends AppCompatActivity {
     DatePickerDialog datePickerDialog;
     Calendar calendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener listener;
-
+    Button onayButton;
+    Intent intent;
+    LoginActivity loginActivity = this;
     //-----------------------------------------------
 
     Dialog onayKoduDialog;
@@ -29,14 +32,17 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        registerHandlers();
+
         init();
+        registerHandlers();
     }
 
     private void init(){
         onayKoduDialog = new Dialog(this);
         onayKoduDialog.setContentView(R.layout.telefon_kod_layout);
         //bu diyalogun view elemanlarına onayKoduDialog.findViewById() metodu ile ulaşabilirsiniz
+        onayButton = (Button) onayKoduDialog.findViewById(R.id.btnOnayla);
+
 
 
         int yil = calendar.get(Calendar.YEAR);
@@ -63,7 +69,15 @@ public class LoginActivity extends AppCompatActivity {
                 * */
             }
         };
-    };
+        onayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                intent = new Intent(loginActivity,PermissionsActivity.class);
+                loginActivity.startActivity(intent);
+            }
+        });
+    }
     public void dogumTarihButton(View view){
 
         datePickerDialog.show();
