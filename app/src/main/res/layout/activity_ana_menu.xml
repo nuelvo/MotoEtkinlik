@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrmotoetkinlik"
+    tools:context=".view.AnaMenuActivity">
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="215dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/style_ileri_button"
+        android:drawableLeft="@drawable/profil_button_logo"
+        android:text="Profilim"
+        android:textAlignment="center"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="match_parent"
+        android:layout_height="429dp"
+
+        android:layout_marginTop="8dp"
+        android:src="@drawable/motoetkinlikgif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCihazaBaglan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/style_ileri_button"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_baglan"
+        android:text="Bağlan ve Korunmaya Başla ! "
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bağlantı Durumu : "
+        android:textSize="16sp"
+        android:textColor="#FFF"
+        app:layout_constraintStart_toStartOf="@+id/btnCihazaBaglan"
+        app:layout_constraintTop_toBottomOf="@+id/btnCihazaBaglan" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Bağlı Değil"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/btnCihazaBaglan"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                intent = new Intent(loginActivity,PermissionsActivity.class);
+                intent = new Intent(loginActivity,AnaMenuActivity.class);
                 loginActivity.startActivity(intent);
             }
         });
