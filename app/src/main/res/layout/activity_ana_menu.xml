@@ -19,6 +19,7 @@
         android:background="@drawable/style_ileri_button"
         android:drawableLeft="@drawable/profil_button_logo"
         android:text="Profilim"
+        android:textAllCaps="false"
         android:textAlignment="center"
 
 

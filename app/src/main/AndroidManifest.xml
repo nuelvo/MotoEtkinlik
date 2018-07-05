@@ -19,7 +19,8 @@
         <activity android:name=".view.LoginActivity" />
         <activity android:name=".view.PermissionsActivity" />
         <activity android:name=".view.AnaMenuActivity" />
-        <activity android:name=".view.AcilDurumActivity"></activity>
+        <activity android:name=".view.AcilDurumActivity" />
+        <activity android:name=".view.ProfileActivity"></activity>
     </application>
 
 </manifest>
